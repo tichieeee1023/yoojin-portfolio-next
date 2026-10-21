@@ -108,6 +108,7 @@
 .backgroundCard p { margin: 0 0 12px; color: #625549; font-size: clamp(13px, 1.2vw, 16px); line-height: 1.65; word-break: keep-all; }
 .backgroundCard p b { color: var(--ink); font-weight: 800; }
 .backgroundCard small { color: #6f6054; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.backgroundCard .backgroundCourse { display: block; margin-top: 4px; font-weight: 500; letter-spacing: .01em; }
 .backgroundCard:nth-child(3) h4 { color: var(--warm); }
 .backgroundCard:nth-child(4) { background: #e8ddcc; }
 .backgroundCard:nth-child(4):hover { background: #e1d3bf; }

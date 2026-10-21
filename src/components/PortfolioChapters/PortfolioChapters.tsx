@@ -776,7 +776,7 @@ export default function PortfolioChapters() {
                 <span className="backgroundIndex">01 / EDUCATION</span>
                 <h4><span className="backgroundFull">LANGUAGE<br />&amp; LITERATURE</span><span className="backgroundCompact">LANGUAGE<br />&amp; LIT.</span></h4>
                 <p><b>중앙대학교</b><br /><span className="backgroundFull">일본어문학전공 · 국어국문학 복수전공</span><span className="backgroundCompact">일본어문학 · 국어국문학</span></p>
-                <small><span className="backgroundFull">규슈대학교 JLCC 교환학생 · JLPT N1</span><span className="backgroundCompact">규슈대 교환 · JLPT N1</span></small>
+                <small><span className="backgroundFull">규슈대학교 JLCC 교환학생 · JLPT N1<span className="backgroundCourse">JLCC | Japanese Language and Culture Course</span></span><span className="backgroundCompact">규슈대 교환 · JLPT N1</span></small>
               </article>
               <article className="backgroundCard backgroundCard--development">
                 <span className="backgroundIndex">02 / DEVELOPMENT</span>
@@ -796,7 +796,7 @@ export default function PortfolioChapters() {
               <article className="backgroundCard">
                 <span className="backgroundIndex">04 / EXPERIENCE</span>
                 <h4>MAKE<br />&amp; OPERATE</h4>
-                <p><b><span className="backgroundFull">드림팩토리 월하 · 시흥양봉협동조합</span><span className="backgroundCompact">월하 · 시흥양봉협동조합</span></b><br /><span className="backgroundFull">기획 · 제작 · 콘텐츠 · 온라인 운영</span><span className="backgroundCompact">기획 · 제작 · 온라인 운영</span></p>
+                <p><b><span className="backgroundFull">드림팩토리 월하 · 사회적기업</span><span className="backgroundCompact">월하 · 사회적기업</span></b><br /><span className="backgroundFull">기획 · 제작 · 콘텐츠 · 온라인 운영</span><span className="backgroundCompact">기획 · 제작 · 온라인 운영</span></p>
                 <small><span className="backgroundFull">FROM IDEA TO REAL OUTPUT</span><span className="backgroundCompact">아이디어에서 운영까지</span></small>
               </article>
             </div>
