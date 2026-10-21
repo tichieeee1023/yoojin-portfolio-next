@@ -1,0 +1,35 @@
+.mobileSiteMenu { display: block; position: relative; flex: 0 0 auto; }
+.mobileSiteMenuTrigger { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 46px; height: 46px; gap: 5px; border: 0; padding: 0; background: transparent; cursor: pointer; color: #30241d; }
+.mobileSiteMenuTrigger span { display: block; width: 23px; height: 2px; background: currentColor; border-radius: 2px; }
+.mobileSiteMenu--light .mobileSiteMenuTrigger { color: #fff9ee; }
+.mobileSiteMenuTrigger:focus-visible { outline: 2px solid #a16c4c; outline-offset: 2px; }
+.siteDirectory { box-sizing: border-box; position: fixed; inset: 0; margin: 0 0 0 auto; width: min(480px, 100%); max-width: 100%; height: 100dvh; max-height: 100dvh; padding: 0 32px max(24px, env(safe-area-inset-bottom)); border: 0; border-left: 1px solid #cbbba9; background: #f5f0e7; color: #30251e; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; font-family: 'Noto Sans KR', sans-serif; }
+.siteDirectory[open] { animation: directoryEnter .28s ease-out; }
+.siteDirectory::backdrop { background: #21181099; backdrop-filter: blur(4px); }
+.siteDirectoryHeader { position: sticky; top: 0; z-index: 1; background: #f5f0e7; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: max(26px, env(safe-area-inset-top)) 0 24px; border-bottom: 1px solid #a16c4c; }
+.siteDirectoryHeader > div > span { color: #946143; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.siteDirectoryHeader h2 { display: flex; align-items: baseline; gap: 12px; margin: 12px 0 0; font-size: 29px; font-weight: 600; letter-spacing: -.05em; }
+.siteDirectoryHeader h2 span { font-size: 11px; color: #946143; letter-spacing: .12em; font-weight: 500; }
+.siteDirectory button { font: inherit; cursor: pointer; color: inherit; }
+.siteDirectoryHeader button { width: 46px; height: 46px; background: transparent; border: 1px solid #cfc5b8; border-radius: 50%; font-size: 29px; line-height: 1; }
+.siteDirectoryGroup { border-bottom: 1px solid #cfc5b8; }
+.siteDirectoryRow { display: flex; align-items: center; }
+.siteDirectoryRow > a { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; min-height: 74px; text-decoration: none; color: inherit; }
+.siteDirectoryRow strong { font-size: 23px; font-weight: 650; letter-spacing: -.035em; }
+.siteDirectoryNumber { font-size: 11px; color: #946143; font-variant-numeric: tabular-nums; }
+.siteDirectoryRow small { margin-left: auto; color: #736052; font-size: 12px; white-space: nowrap; }
+.siteDirectoryRow > button { flex-shrink: 0; width: 44px; height: 48px; border: 0; background: transparent; margin-left: 4px; font-size: 25px; font-weight: 400; }
+.siteDirectoryChildren { list-style: none; margin: 0; padding: 0 0 18px 25px; }
+.siteDirectoryChildren[hidden] { display: none; }
+.siteDirectoryChildren a { display: flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; color: #655346; font-size: 15px; line-height: 1.5; }
+.siteDirectoryChildren a > span:first-child { color: #9a826c; font-size: 10px; }
+.siteDirectoryChildren a > span:last-child { margin-left: auto; padding-left: 8px; font-size: 16px; }
+.siteDirectory a[aria-current], .siteDirectory a:hover { color: #9a5735; }
+.siteDirectory a[aria-current] { font-weight: 700; }
+.siteDirectory button:hover { background: #49362b08; }
+.siteDirectory a:focus-visible, .siteDirectory button:focus-visible { outline: 2px solid #a16c4c; outline-offset: -2px; }
+.siteDirectoryFooter { margin-top: 24px; font-size: 12px; line-height: 1.7; color: #8a7563; }
+@keyframes directoryEnter { from { transform: translateX(40px); opacity: .3; } to { transform: translateX(0); opacity: 1; } }
+@media (max-width: 600px) { .siteDirectory { width: calc(100% - 20px); padding-inline: 22px; } .siteDirectoryHeader { padding-top: max(20px, env(safe-area-inset-top)); } .siteDirectoryRow { flex-wrap: nowrap; } .siteDirectoryRow strong { font-size: 21px; } .siteDirectoryRow small { font-size: 11px; } .siteDirectoryRow > a { gap: 8px; min-height: 68px; } }
+@media (max-width: 350px) { .siteDirectory { padding-inline: 18px; } .siteDirectoryRow small { display: none; } .siteDirectoryChildren { padding-left: 20px; } .siteDirectoryChildren a { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .siteDirectory[open] { animation: none; } }

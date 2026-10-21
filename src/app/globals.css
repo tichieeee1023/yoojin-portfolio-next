@@ -1,0 +1,64 @@
+/* Preserve the original cascade: shared styles first, mobile overrides last. */
+@import '../index.css';
+@import '../components/YoojinHero/YoojinHero.css';
+@import '../components/YoojinHero/heroControls.css';
+@import '../components/common/MobileMenu.css';
+@import '../components/YoojinHero/MobileHeroIntro.css';
+@import '../components/YoojinHero/DesktopOpening.css';
+@import '../components/common/HeaderClock.css';
+@import '../components/YoojinHero/MobileLevelUpFeedback.css';
+@import '../components/YoojinHero/heroEditorialRefresh.css';
+@import '../components/PortfolioChapters/PortfolioChapters.css';
+@import '../components/SelectedWorkMagazine/styles.css';
+@import '../components/PlayGallery/PlayGallery.css';
+@import '../components/PortfolioChapters/ContactForm.css';
+@import '../components/YoojinHero/YoojinHero.mobile.css';
+@import '../components/YoojinHero/heroControls.mobile.css';
+@import '../components/PortfolioChapters/PortfolioChapters.mobile.css';
+@import '../components/SelectedWorkMagazine/mobile.css';
+@import '../mobile.polish.css';
+@import '../portfolio.content.css';
+@import '../brand-png.css';
+@import '../components/YoojinHero/MobileGrowthEditorial.css';
+@import '../components/common/SiteMenuLayout.css';
+
+/* One alignment system for the primary chat action and secondary TOP action. */
+:root {
+  --floating-control-right: max(24px, env(safe-area-inset-right));
+  --floating-control-bottom: calc(32px + max(20px, env(safe-area-inset-bottom)));
+  --chat-launcher-size: 60px;
+  --top-control-size: 44px;
+  --floating-control-gap: 12px;
+}
+body:has([data-portfolio-chat]) .topButton {
+  right: calc(var(--floating-control-right) + (var(--chat-launcher-size) - var(--top-control-size)) / 2);
+  bottom: calc(var(--floating-control-bottom) + var(--chat-launcher-size) + var(--floating-control-gap));
+  width: var(--top-control-size);
+  height: var(--top-control-size);
+  border: 1px solid color-mix(in srgb, var(--brown) 40%, var(--paper));
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--brown);
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--brown) 10%, transparent);
+}
+body:has([data-portfolio-chat]) .topButton > span { font-size: 16px; font-weight: 600; transform: none; }
+body:has([data-portfolio-chat]) .topButton small { font-size: 7px; font-weight: 600; letter-spacing: .08em; }
+body:has([data-portfolio-chat]) .topButton:hover,
+body:has([data-portfolio-chat]) .topButton:focus-visible {
+  background: var(--paper-deep);
+  color: var(--brown);
+  border-color: var(--warm);
+  transform: translate3d(0, 0, 0);
+}
+body:has([data-portfolio-chat] > button[aria-expanded='true']) .topButton {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media (max-width: 600px) {
+  :root {
+    --floating-control-right: max(12px, env(safe-area-inset-right));
+    --floating-control-bottom: calc(32px + max(12px, env(safe-area-inset-bottom)));
+    --chat-launcher-size: 56px;
+  }
+}

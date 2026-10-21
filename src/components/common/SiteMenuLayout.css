@@ -1,0 +1,15 @@
+/* Shared directory trigger at the right edge of both desktop headers. */
+@media (min-width: 769px) {
+  .heroStage .heroHeader { gap: 14px; }
+  .heroStage .heroHeader > .mobileSiteMenu { margin-left: 4px; }
+  .chapterNav { grid-template-columns: 44px minmax(0, 1fr) 46px; gap: 16px; }
+  .chapterMobileMenu { display: flex; align-items: center; justify-content: flex-end; }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .chapterNav { padding-inline: 24px; gap: 12px; }
+  .chapterNavLinks { gap: 16px; }
+  .heroStage .heroHeader nav { gap: 20px; }
+}
+
+#about-method, #about-background, .skillCard { scroll-margin-top: 78px; }
+@media (max-width: 768px) { #about-method, #about-background, .skillCard { scroll-margin-top: 70px; } }

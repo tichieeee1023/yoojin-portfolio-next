@@ -1,0 +1,63 @@
+* {
+  box-sizing:
+    border-box;
+}
+
+html {
+  /*
+    smooth를 쓰면 GSAP ScrollTrigger의 스냅/scrollTo와 브라우저의 자체 스무딩이
+    동시에 돌면서 장면 스크롤이 끈적하게 느껴진다. 이동 애니메이션은 GSAP가 담당한다.
+  */
+  scroll-behavior: auto;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    #f1eadf;
+
+  color:
+    #171513;
+
+  overflow-x:
+    hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}

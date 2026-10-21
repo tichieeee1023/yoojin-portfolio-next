@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="YJ favicon">
+  <rect x="1.5" y="1.5" width="93" height="93" rx="21" fill="#2b1e17" stroke="#c8a05f" stroke-width="1.5"/>
+  <path d="M21 40 C 35 21, 57 14, 84 18" fill="none" stroke="#c8a05f" stroke-width="1.8" stroke-linecap="round" opacity="0.95"/>
+  <path d="M21 41 C 47 53, 69 55, 89 46" fill="none" stroke="#c8a05f" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+  <text x="25" y="62" fill="#f8f1e6" font-family="Times New Roman, Georgia, serif" font-size="46" font-weight="700" letter-spacing="-0.08em">Y</text>
+  <text x="49" y="69" fill="#f8f1e6" font-family="Times New Roman, Georgia, serif" font-size="50" font-weight="700" letter-spacing="-0.08em">J</text>
+  <path d="M57 14 v10" fill="none" stroke="#c8a05f" stroke-width="1.1" stroke-linecap="round" opacity="0.95"/>
+  <circle cx="57" cy="27" r="1.7" fill="#c8a05f"/>
+  <path d="M57 71 v6" fill="none" stroke="#c8a05f" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="57" cy="80" r="1.5" fill="#c8a05f"/>
+  <path d="M57 7 l3 3 l-3 3 l-3 -3 Z" fill="#c8a05f"/>
+  <path d="M57 86 l2.6 2.6 l-2.6 2.6 l-2.6 -2.6 Z" fill="#c8a05f" opacity="0.8"/>
+  <path d="M79 41 L81 46 L86 48 L81 50 L79 55 L77 50 L72 48 L77 46 Z" fill="#c8a05f"/>
+</svg>
