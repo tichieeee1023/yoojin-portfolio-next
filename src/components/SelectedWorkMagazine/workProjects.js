@@ -6,7 +6,7 @@ const MEDIA = {
   b612: { pc: '/media/b612-pc.webp', mobile: '/media/b612-mobile.webm' },
   forlog: { pc: '/media/forlog-pc.webp', mobile: '/media/forlog-mobile.webm' },
   midnight: { pc: '/media/midnight-pc.webp', mobile: '/media/midnight-mobile.webm' },
-  jajak: { pc: '/media/jajak-pc.webp', mobile: '/media/jajak-mobile.webm' },
+  jajak: { pc: '/media/jajak-pc.webp', admin: '/media/jajak-pc2.webp', mobile: '/media/jajak-mobile.webm', adminMobile: '/media/jajak-mobile2.webm' },
 };
 const media = (slug, kind) => asset(MEDIA[slug]?.[kind] || null);
 const LINKS = {
@@ -32,7 +32,8 @@ const LINKS = {
   },
   "jajak": {
     "live": "https://jajak-ten.vercel.app/cart",
-    "github": "https://github.com/jiwoo1012/TeamProject2"
+    "github": "https://github.com/jiwoo1012/TeamProject2",
+    "adminDemo": "https://jajak-admin-demo.vercel.app/"
   }
 };
 const entries = [
@@ -136,7 +137,10 @@ export const PROJECTS = entries.map((project, index) => ({
   tech: project.techGroups.flatMap(group => group.items),
   layout: index % 2 === 0 ? 'visual-left' : 'visual-right',
   pcSrc: media(project.slug, 'pc', ['webp', 'png', 'jpg', 'jpeg']) || asset(project.existingPc) || null,
+  adminSrc: media(project.slug, 'admin'),
+  adminMobileSrc: media(project.slug, 'adminMobile'),
   mobileSrc: media(project.slug, 'mobile', ['webm', 'mp4', 'gif', 'webp', 'png', 'jpg']),
   live: LINKS[project.slug]?.live || null,
   github: LINKS[project.slug]?.github || null,
+  adminDemo: LINKS[project.slug]?.adminDemo || null,
 }));

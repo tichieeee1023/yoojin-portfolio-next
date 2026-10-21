@@ -93,6 +93,19 @@
 - 배포: https://jajak-ten.vercel.app/cart
 - 소스: https://github.com/jiwoo1012/TeamProject2
 
+### 자작 관리자 페이지 — 독립형 데모
+
+- 관리자 데모: https://jajak-admin-demo.vercel.app/
+- 데모 소스: https://github.com/tichieeee1023/jajak-admin-demo
+- 목적: 채용 담당자가 실제 관리자 계정 없이 관리자 페이지의 UI와 주요 기능을 직접 체험할 수 있도록 제공합니다. 로그인 없이 이용할 수 있습니다.
+- 구성: 대시보드, 상품·주문·회원·리뷰·공지·이벤트·AI 추천 기록 관리.
+- 기술: React, Vite, JavaScript, React Router, SCSS Modules, Chart.js, localStorage.
+- 데이터: 실제 Firebase 및 운영 데이터베이스와 분리된 Mock 데이터를 사용합니다. 독립 데모는 Firebase에 연결되지 않습니다.
+- 체험: 가상 데이터 등록·수정·삭제, 검색·필터링, 주문 상태 변경 및 데이터 초기화를 자유롭게 체험할 수 있습니다.
+- 저장: 변경 사항은 방문자의 브라우저 localStorage에만 반영됩니다.
+- 보안 설계: 실제 관리자 권한과 인증정보를 공개하지 않고 독립된 시연 환경을 제공합니다.
+- 실제 서비스와의 차이: 실제 자작 서비스는 Firebase와 연동되고 독립 데모는 브라우저 내부 Mock 데이터로 동작합니다. 데모의 데이터 변경은 실제 자작 쇼핑몰에 반영되지 않습니다.
+
 ## PLAY — 게임과 인터랙션
 
 ### LAST ORDER / 라스트 오더

@@ -44,14 +44,23 @@ function MagazineIntro({ introRef, onOpen }) {
 function ProjectVisual({ project, active, loadMedia, compact }) {
   const [view, setView] = useState('pc');
   const showMobile = compact && view === 'mobile' && Boolean(project.mobileSrc);
+  const showAdmin = !compact && view === 'admin' && Boolean(project.adminSrc);
+  const phoneSrc = showAdmin ? project.adminMobileSrc : project.mobileSrc;
+  const previewTitle = `${project.title.join(' ')}${showAdmin ? ' 관리자' : ''}`;
   return (
-    <figure className={`visual js-visual ${showMobile ? 'is-mobile-preview' : ''}`}>
-      <div className="visual-media js-media"><ProjectMedia src={showMobile ? project.mobileSrc : project.pcSrc} title={project.title.join(' ')} phone={showMobile} enabled={loadMedia} active={active} /></div>
-      <div className="phone js-phone" role="group" aria-label={`${project.title.join(' ')} 모바일 화면`}>
+    <figure className={`visual js-visual ${showMobile ? 'is-mobile-preview' : ''} ${showAdmin ? 'is-admin-preview' : ''}`}>
+      <div className="visual-media js-media"><ProjectMedia src={showAdmin ? project.adminSrc : showMobile ? project.mobileSrc : project.pcSrc} title={`${project.title.join(' ')}${showAdmin ? ' 관리자' : ''}`} phone={showMobile} enabled={loadMedia} active={active} /></div>
+      <div className="phone js-phone" role="group" aria-label={`${previewTitle} 모바일 화면`}>
         <div className="phone-notch" />
-        <div className="phone-screen"><ProjectMedia src={project.mobileSrc} title={project.title.join(' ')} phone enabled={loadMedia && active && !compact} active={active} /></div>
+        <div className="phone-screen"><ProjectMedia src={phoneSrc} title={previewTitle} phone enabled={loadMedia && active && !compact} active={active} /></div>
       </div>
       {project.special?.type === 'turntable-visualizer' && <MidnightTurntable active={active} />}
+      {project.adminSrc && !compact && <div className="admin-preview-controls">
+        <div className="admin-preview-switch" role="group" aria-label={`${project.koTitle} PC 화면 선택`}>
+          <button type="button" aria-pressed={!showAdmin} onClick={() => setView('pc')}>쇼핑몰 화면</button>
+          <button type="button" aria-pressed={showAdmin} onClick={() => setView('admin')}>관리자 화면 보기</button>
+        </div>
+      </div>}
       {project.pcSrc && project.mobileSrc && <div className="preview-switch" role="group" aria-label={`${project.koTitle} 화면 미리보기`}>
         <button type="button" aria-pressed={!showMobile} onClick={() => setView('pc')}>PC</button>
         <button type="button" aria-pressed={showMobile} onClick={() => setView('mobile')}>모바일</button>
@@ -98,6 +107,7 @@ function ProjectEditorial({ project }) {
       <div className="ed-links js-reveal">
         {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label={`${project.koTitle} 홈페이지 (새 탭)`}><ProjectLinkIcon /><span>홈페이지</span><span className="ed-link-arrow" aria-hidden="true">↗</span></a>}
         {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.koTitle} GitHub (새 탭)`}><ProjectLinkIcon github /><span>GitHub</span><span className="ed-link-arrow" aria-hidden="true">↗</span></a>}
+        {project.adminDemo && <a href={project.adminDemo} target="_blank" rel="noopener noreferrer" aria-label={`${project.koTitle} 관리자 DEMO (새 탭)`}><ProjectLinkIcon /><span>관리자 DEMO</span><span className="ed-link-arrow" aria-hidden="true">↗</span></a>}
       </div>
     </article>
   );
