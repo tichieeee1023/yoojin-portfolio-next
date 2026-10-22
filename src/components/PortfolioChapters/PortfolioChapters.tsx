@@ -10,6 +10,7 @@ import PlayGallery from '../PlayGallery/PlayGallery';
 import MobileMenu from '../common/MobileMenu';
 import HeaderClock from '../common/HeaderClock';
 import ContactForm from './ContactForm';
+import CareerSection from './CareerSection';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -719,10 +720,61 @@ export default function PortfolioChapters() {
           </div>
         </div>
 
+        <CareerSection />
+
+        <div id="about-background" className="aboutScreen aboutScreen--background">
+          <div className="aboutDetail aboutBackground">
+            <div className="aboutDetailHead">
+              <span>04 / BACKGROUND</span>
+              <span>SELECTED PROFILE</span>
+            </div>
+            <div className="backgroundIntro">
+              <p>
+                <span className="backgroundFull">지금의 작업 방식을 만든<br />배경과 경험.</span>
+                <span className="backgroundCompact">작업의 바탕,<br />배경과 경험.</span>
+              </p>
+              <span>
+                <span className="backgroundFull">필요한 정보만 빠르게 읽히도록 정리했습니다.</span>
+                <span className="backgroundCompact">언어 · 개발 · 데이터 · AI, 네 가지 배경.</span>
+              </span>
+            </div>
+            <div className="backgroundGrid">
+              <article className="backgroundCard">
+                <span className="backgroundIndex">01 / EDUCATION</span>
+                <h4><span className="backgroundFull">LANGUAGE<br />&amp; LITERATURE</span><span className="backgroundCompact">LANGUAGE<br />&amp; LIT.</span></h4>
+                <p><b>중앙대학교</b><br /><span className="backgroundFull">일본어문학전공 · 국어국문학 복수전공</span><span className="backgroundCompact">일본어문학 · 국어국문학</span></p>
+                <small><span className="backgroundFull">규슈대학교 JLCC 교환학생 · JLPT N1<span className="backgroundCourse">JLCC | Japanese Language and Culture Course</span></span><span className="backgroundCompact">규슈대 교환 · JLPT N1</span></small>
+              </article>
+              <article className="backgroundCard backgroundCard--development">
+                <span className="backgroundIndex">02 / DEVELOPMENT</span>
+                <h4>FRONTEND</h4>
+                <p><b><span className="backgroundFull">이젠아카데미 DX 안산교육센터</span><span className="backgroundCompact">이젠아카데미 DX 안산</span></b><br /><span className="backgroundFull">생성형 AI 활용 프론트엔드 개발자 양성과정</span><span className="backgroundCompact">AI 활용 프론트엔드 과정</span></p>
+                <div className="backgroundHours">
+                  <strong>960<span>H</span></strong>
+                  <small>HTML / CSS<br />JAVASCRIPT / REACT</small>
+                </div>
+              </article>
+              <article className="backgroundCard">
+                <span className="backgroundIndex">03 / DATA ANNOTATION</span>
+                <h4>DATA<br />LABELING</h4>
+                <p><b>크라우드웍스 원격평생교육원</b><br />데이터 라벨링 입문·중급 과정</p>
+                <small>AI TRAINING DATA</small>
+              </article>
+              <article className="backgroundCard">
+                <span className="backgroundIndex">04 / AI &amp; WORKFLOW</span>
+                <h4><span className="backgroundFull">GENERATIVE<br />AI</span><span className="backgroundCompact">GEN AI<br />WORKFLOW</span></h4>
+                <p><b><span className="backgroundFull">시흥여성새로일하기지원본부</span><span className="backgroundCompact">시흥새일지원본부</span></b><br /><span className="backgroundFull">생성형 AI 기반 사무혁신전문가 과정</span><span className="backgroundCompact">생성형 AI 사무혁신 과정</span></p>
+                <small><span className="backgroundFull">AI-ASSISTED WORKFLOW</span><span className="backgroundCompact">AI 업무 활용</span></small>
+              </article>
+            </div>
+
+          </div>
+        </div>
+
         <div id="about-method" className="aboutScreen aboutScreen--transcreation">
           <div className="aboutDetail aboutTranscreation">
             <div className="aboutDetailHead">
-              <span>01 / TRANSCREATION</span>
+              <span>05 / TRANSCREATION</span>
               <span>TRANSLATION + CREATION</span>
             </div>
             <div className="transcreationTitle" role="img" aria-label="Translation plus Creation equals Transcreation">
@@ -752,59 +804,12 @@ export default function PortfolioChapters() {
                 <p>요구와 기획을 화면과 인터랙션으로 구체화합니다.</p>
               </article>
             </div>
-          </div>
-        </div>
-
-        <div id="about-background" className="aboutScreen aboutScreen--background">
-          <div className="aboutDetail aboutBackground">
-            <div className="aboutDetailHead">
-              <span>02 / BACKGROUND</span>
-              <span>SELECTED PROFILE</span>
-            </div>
-            <div className="backgroundIntro">
-              <p>
-                <span className="backgroundFull">지금의 작업 방식을 만든<br />배경과 경험.</span>
-                <span className="backgroundCompact">작업의 바탕,<br />배경과 경험.</span>
-              </p>
-              <span>
-                <span className="backgroundFull">필요한 정보만 빠르게 읽히도록 정리했습니다.</span>
-                <span className="backgroundCompact">언어 · 개발 · AI · 운영, 네 가지 경험.</span>
-              </span>
-            </div>
-            <div className="backgroundGrid">
-              <article className="backgroundCard">
-                <span className="backgroundIndex">01 / EDUCATION</span>
-                <h4><span className="backgroundFull">LANGUAGE<br />&amp; LITERATURE</span><span className="backgroundCompact">LANGUAGE<br />&amp; LIT.</span></h4>
-                <p><b>중앙대학교</b><br /><span className="backgroundFull">일본어문학전공 · 국어국문학 복수전공</span><span className="backgroundCompact">일본어문학 · 국어국문학</span></p>
-                <small><span className="backgroundFull">규슈대학교 JLCC 교환학생 · JLPT N1<span className="backgroundCourse">JLCC | Japanese Language and Culture Course</span></span><span className="backgroundCompact">규슈대 교환 · JLPT N1</span></small>
-              </article>
-              <article className="backgroundCard backgroundCard--development">
-                <span className="backgroundIndex">02 / DEVELOPMENT</span>
-                <h4>FRONTEND</h4>
-                <p><b><span className="backgroundFull">이젠아카데미 DX 안산교육센터</span><span className="backgroundCompact">이젠아카데미 DX 안산</span></b><br /><span className="backgroundFull">생성형 AI 활용 프론트엔드 개발자 양성과정</span><span className="backgroundCompact">AI 활용 프론트엔드 과정</span></p>
-                <div className="backgroundHours">
-                  <strong>960<span>H</span></strong>
-                  <small>HTML / CSS<br />JAVASCRIPT / REACT</small>
-                </div>
-              </article>
-              <article className="backgroundCard">
-                <span className="backgroundIndex">03 / AI &amp; WORKFLOW</span>
-                <h4><span className="backgroundFull">GENERATIVE<br />AI</span><span className="backgroundCompact">GEN AI<br />WORKFLOW</span></h4>
-                <p><b><span className="backgroundFull">시흥여성새로일하기지원본부</span><span className="backgroundCompact">시흥새일지원본부</span></b><br /><span className="backgroundFull">생성형 AI 기반 사무혁신전문가 과정</span><span className="backgroundCompact">생성형 AI 사무혁신 과정</span></p>
-                <small><span className="backgroundFull">AI-ASSISTED WORKFLOW</span><span className="backgroundCompact">AI 업무 활용</span></small>
-              </article>
-              <article className="backgroundCard">
-                <span className="backgroundIndex">04 / EXPERIENCE</span>
-                <h4>MAKE<br />&amp; OPERATE</h4>
-                <p><b><span className="backgroundFull">드림팩토리 월하 · 사회적기업</span><span className="backgroundCompact">월하 · 사회적기업</span></b><br /><span className="backgroundFull">기획 · 제작 · 콘텐츠 · 온라인 운영</span><span className="backgroundCompact">기획 · 제작 · 온라인 운영</span></p>
-                <small><span className="backgroundFull">FROM IDEA TO REAL OUTPUT</span><span className="backgroundCompact">아이디어에서 운영까지</span></small>
-              </article>
-            </div>
             <a className="backgroundWorkNext" href="#projects">
               <span>NEXT / SELECTED WORK</span><strong>WORK INDEX</strong><b aria-hidden="true">↘</b>
             </a>
           </div>
         </div>
+
       </div>
     </section>
 

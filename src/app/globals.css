@@ -21,6 +21,7 @@
 @import '../brand-png.css';
 @import '../components/YoojinHero/MobileGrowthEditorial.css';
 @import '../components/common/SiteMenuLayout.css';
+@import '../components/PortfolioChapters/CareerSection.css';
 
 /* One alignment system for the primary chat action and secondary TOP action. */
 :root {

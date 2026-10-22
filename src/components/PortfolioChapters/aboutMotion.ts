@@ -13,6 +13,13 @@ import { gsap } from 'gsap';
 export function buildAboutTimeline(screen: HTMLElement): gsap.core.Timeline | null {
   const tl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
 
+  if (screen.classList.contains('aboutScreen--career')) {
+    tl.fromTo(screen.querySelectorAll('.aboutDetailHead, .careerIntro, .careerEntry, .careerPhoto, .careerNext'),
+      { y: 18, opacity: 0 },
+      { y: 0, opacity: 1, duration: .55, stagger: .08, clearProps: 'transform,opacity' }, 0);
+    return tl;
+  }
+
   if (screen.classList.contains('aboutScreen--profile')) {
     const portrait = screen.querySelector('.aboutPortrait');
     const kicker = screen.querySelector('.aboutKicker');

@@ -104,7 +104,7 @@ export const skillGroups = [
   },
 ];
 
-export const aboutPagerLabels = ['INTRO', 'PROFILE', 'TRANSCREATION', 'BACKGROUND'];
+export const aboutPagerLabels = ['INTRO', 'PROFILE', 'CAREER', 'BACKGROUND', 'TRANSCREATION'];
 
 /** 1 → '01' */
 export const pad = (n: number) => String(n).padStart(2, '0');

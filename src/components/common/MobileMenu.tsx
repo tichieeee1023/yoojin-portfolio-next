@@ -4,7 +4,8 @@ import { navigateToChapter } from '../PortfolioChapters/chapterNavigation';
 
 const items = [
   { id: 'about', en: 'ABOUT', ko: '소개', children: [
-    { id: 'about-profile', label: '개발자 소개' }, { id: 'about-method', label: '작업 방식' }, { id: 'about-background', label: '배경과 경험' },
+    { id: 'about-profile', label: '개발자 소개' }, { id: 'about-career', label: '이전 실무 경력' },
+    { id: 'about-background', label: '배경과 교육' }, { id: 'about-method', label: '작업 방식' },
   ] },
   { id: 'projects', en: 'PORTFOLIO', ko: '대표 작업', children: [
     { id: 'work-moonlight', label: 'Moonlight Bookstore' }, { id: 'work-harvest', label: 'Daily Harvest' },
