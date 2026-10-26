@@ -44,7 +44,8 @@ export default function PortfolioChatbot() {
 
   const close = () => {
     setOpen(false);
-    toggleRef.current?.focus({ preventScroll: true });
+    // The mobile launcher becomes visible again after the panel closes.
+    window.requestAnimationFrame(() => toggleRef.current?.focus({ preventScroll: true }));
   };
 
   const send = async (question: string) => {

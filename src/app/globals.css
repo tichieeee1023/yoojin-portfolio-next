@@ -59,7 +59,11 @@ body:has([data-portfolio-chat] > button[aria-expanded='true']) .topButton {
 @media (max-width: 600px) {
   :root {
     --floating-control-right: max(12px, env(safe-area-inset-right));
-    --floating-control-bottom: calc(32px + max(12px, env(safe-area-inset-bottom)));
-    --chat-launcher-size: 56px;
+    --floating-control-bottom: max(16px, env(safe-area-inset-bottom));
+    --chat-launcher-size: 48px;
+    --floating-control-gap: 8px;
   }
+  body:has(dialog[open]) [data-portfolio-chat],
+  body:has(dialog[open]) .topButton { visibility: hidden; pointer-events: none; }
+  .chapterContact { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
 }

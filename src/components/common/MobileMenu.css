@@ -32,4 +32,9 @@
 @keyframes directoryEnter { from { transform: translateX(40px); opacity: .3; } to { transform: translateX(0); opacity: 1; } }
 @media (max-width: 600px) { .siteDirectory { width: calc(100% - 20px); padding-inline: 22px; } .siteDirectoryHeader { padding-top: max(20px, env(safe-area-inset-top)); } .siteDirectoryRow { flex-wrap: nowrap; } .siteDirectoryRow strong { font-size: 21px; } .siteDirectoryRow small { font-size: 11px; } .siteDirectoryRow > a { gap: 8px; min-height: 68px; } }
 @media (max-width: 350px) { .siteDirectory { padding-inline: 18px; } .siteDirectoryRow small { display: none; } .siteDirectoryChildren { padding-left: 20px; } .siteDirectoryChildren a { font-size: 14px; } }
+@media (max-width: 600px) {
+  .siteDirectory { scroll-padding-block: 120px 24px; }
+  .siteDirectoryRow > button { width: 48px; }
+  .siteDirectoryChildren a { min-height: 48px; padding-block: 4px; overflow-wrap: anywhere; }
+}
 @media (prefers-reduced-motion: reduce) { .siteDirectory[open] { animation: none; } }

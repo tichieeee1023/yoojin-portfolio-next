@@ -38,11 +38,13 @@
 .contactFormSuccess p { color: #736052; font-size: 15px; margin-bottom: 28px; }
 .contactFormSuccess button { justify-content: center; }
 @media (max-width: 600px) {
-  .contactFormDialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); padding: 18px 22px 20px; }
+  .contactFormDialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); padding: 18px 22px max(20px, env(safe-area-inset-bottom)); scroll-padding-block: 72px 20px; }
   .contactFormHeader { top: -18px; }
   .contactFormFields { grid-template-columns: 1fr; gap: 0; }
   .contactFormDialog h2 { margin-top: 20px; }
   .contactFormIntro { margin-bottom: 22px; }
+  .contactFormDialog input, .contactFormDialog textarea { scroll-margin-block: 72px 20px; }
+  .contactFormFooter { flex-wrap: wrap; gap: 4px 12px; }
 }
 @media (max-width: 350px), (max-height: 650px) {
   .contactFormDialog h2 { font-size: 26px; margin-top: 18px; }

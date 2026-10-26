@@ -41,7 +41,7 @@ export default function CareerSection() {
               {'brand' in entry && <p className="careerBrand">{entry.brand}</p>}
               <p className="careerRole">{entry.role}</p>
               <ul>{entry.tasks.map(task => <li key={task}>{task}</li>)}</ul>
-              {entry.id === 'moonha' && <div className="careerActivities"><span>2016년경 / 주요 활동</span><p>반디앤루니스 사당역점·센트럴시티점 문구매장 상품 입점 · 티몬 상품 입점</p></div>}
+              {entry.id === 'moonha' && <div className="careerActivities"><span>2016년경 / 주요 활동</span><p><span className="careerActivityStore">반디앤루니스 사당역점·센트럴시티점 문구매장 상품 입점</span><span className="careerActivitySeparator"> · </span><span className="careerActivityStore">티몬 상품 입점</span></p></div>}
             </div>
           </article>)}
         </div>
